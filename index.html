@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pastel Snake - Rắn săn mồi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+    <header class="header">
+      <div class="logo">🐍</div>
+      <div>
+        <h1>Pastel Snake</h1>
+        <p>Ăn thật nhiều, lớn thật nhanh! ♡</p>
+      </div>
+    </header>
+
+    <section class="score-board">
+      <div class="score-card">
+        <span>🍓 Điểm số</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="score-card">
+        <span>🏆 Điểm cao</span>
+        <strong id="bestScore">0</strong>
+      </div>
+      <div class="score-card">
+        <span>🐍 Chiều dài</span>
+        <strong id="length">3</strong>
+      </div>
+    </section>
+
+    <section class="board-wrapper">
+      <canvas id="gameCanvas" width="400" height="400"
+        aria-label="Bàn chơi rắn săn mồi"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <div id="overlayEmoji" class="overlay-emoji">🐍</div>
+          <h2 id="overlayTitle">Sẵn sàng chưa?</h2>
+          <p id="overlayText">
+            Ăn dâu tây để tăng điểm và tránh va vào thân rắn nhé!
+          </p>
+          <button id="mainButton" class="primary-button">
+            ♡ Bắt đầu chơi
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <p id="status" class="status">Nhấn bắt đầu để vào trò chơi nhé!</p>
+
+    <section class="actions">
+      <button id="pauseButton" class="secondary-button" disabled>
+        ⏸ Tạm dừng
+      </button>
+      <button id="restartButton" class="secondary-button">
+        ↻ Chơi lại
+      </button>
+    </section>
+
+    <section class="mobile-controls" aria-label="Điều khiển">
+      <button class="control up" data-direction="up"
+        aria-label="Đi lên">▲</button>
+      <div class="control-row">
+        <button class="control" data-direction="left"
+          aria-label="Đi sang trái">◀</button>
+        <button class="control" data-direction="down"
+          aria-label="Đi xuống">▼</button>
+        <button class="control" data-direction="right"
+          aria-label="Đi sang phải">▶</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Điều khiển bằng phím mũi tên hoặc WASD</p>
+      <p class="footer-note">Made with ♡ in pastel colors</p>
+    </footer>
+  </main>
+</body>
+</html>
